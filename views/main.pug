@@ -1,0 +1,79 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Attendence page
+  link(rel='stylesheet' href='./bootstrap.min.css')
+  link(rel='stylesheet' href='./style-index.css')
+  style.
+    body{
+    background-color: white;
+    }
+    #my_camera,#count{
+    width: 320px;
+    height: 240px;
+    margin: 20px 20%;
+    }
+    #count{
+    font-size: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+// navbar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    a.navbar-brand(href='#') Attendance-Automation
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link(href='/') Home
+        li.nav-item
+          a.nav-link(href='/login') Login
+        li.nav-item.active
+          a.nav-link(href='#') Attendence
+// main page
+.container
+  <div class="loading">Loading&#8230;</div>
+  // teacher-name alert
+  .alert.alert-success.mt-3(role='alert')
+    .row
+      #teacher.col-6 teacher
+      #period.col-6.d-flex.justify-content-end period
+  .row
+    .col-lg-6.col-md-12.col-sm-12
+      .row
+        .col-12
+          #my_camera.bg-dark
+        .col-12
+          #count.bg-dark
+            | 0
+        .col-12.d-flex.align-items-center.justify-content-center.mb-5.mt-4
+          button#submit.btn.btn-dark( data-toggle="modal" href="#ignismyModal") Submit Attendance
+    .col-lg-6.col-md-12.col-sm-12
+      table.table
+        thead.thead-dark
+          tr
+            th(scope='col') Name
+            th(scope='col') Late/In-time
+        tbody#details
+  #ignismyModal.modal.fade(role='dialog')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button' data-dismiss='modal' aria-label='')
+            span &times;
+        .modal-body
+          .thank-you-pop
+            img(src='http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png' alt='')
+            h1 Thank You!
+            p Your Attendance was submitted. 
+
+script(src='./jquery.min.js')
+script(src='./bootstrap.min.js')
+script(src="./webcam.min.js")
+script(src="./face-api.min.js")
+script(src="./script.js")

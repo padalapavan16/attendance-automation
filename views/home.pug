@@ -1,0 +1,83 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title home page
+  link(rel='stylesheet' href='./bootstrap.min.css')
+  style.
+    body{
+    background-color: white;
+    }
+    .card:hover{
+      transition: ease 0.2s;
+      transform: translateY(5px);
+      box-shadow: 2px 2px 20px black;
+    }
+// navbar
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    a.navbar-brand(href='#') Attendance-Automation
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ml-auto
+        li.nav-item.active
+          a.nav-link(href='#') Home
+        li.nav-item
+          a.nav-link(href='/login') Login
+        li.nav-item
+          a.nav-link(href='/main') Attendence
+.container
+  // cards for description
+  h1.text-center.mt-4 Features
+  .row.mt-5
+    .col.col-xl-3.col-lg-3.col-md-6.col-sm-12.col-xs-12.mb-3
+      .card.border-dark.pt-2
+        .row
+          .col-4
+          .col-4
+            img.pb-1.card-img-top(src='./lecturer.png' alt='pic')
+          .col-4
+        .card-body
+          h5.card-title Lecturer Login using Face-Recognition  
+          p.card-text.text-justify
+            | Lecturer can easily login through face recognition without wasting anytime for entering id and password.
+    .col.col-xl-3.col-lg-3.col-md-6.col-sm-12.col-xs-12.mb-3
+      .card.pt-3.border-dark
+        .row
+          .col-4
+          .col-4
+            img.card-img-top(src='./paper.png' alt='pic')
+          .col-4
+        .card-body
+          h5.card-title Automatic attendance taking every period
+          p.card-text.text-justify
+            | App is automated in a way that it takes attendance every period in the classroom and updates every period in a day.
+    .col.col-xl-3.col-lg-3.col-md-6.col-sm-12.col-xs-12.mb-3
+      .card.pt-3.border-dark
+        .row
+          .col-4
+          .col-4
+            img.card-img-top(src='./calculate.png' alt='pic')
+          .col-4
+        .card-body
+          h5.card-title storing attendance in database dynamically without.
+          p.card-text.text-justify
+            | database gets automatically updated whenever camera recognizes any student.
+    .col.col-xl-3.col-lg-3.col-md-6.col-sm-12.col-xs-12.mb-3
+      .card.pt-3.border-dark
+        .row
+          .col-4
+          .col-4
+            img.card-img-top(src='./student.png' alt='pic')
+          .col-4
+        .card-body
+          h5.card-title attendance using face-recognition
+          p.card-text.text-justify
+            | logging the attendance to a person whenever camera recognizes the student in the classroom 
+    .col-lg-4.col-md-3.col-sm-1.mt-5
+    .col-lg-4.col-md-6.col-sm-10.d-flex.justify-content-center.align-items-center.mt-5
+      a.btn.btn-dark.pl-5.pr-5.mb-5(href='/login')  LOGIN 
+    .col-lg-4.col-md-3.col-sm-1.mt-5
+script(src='./jquery.min.js')
+script(src='./bootstrap.min.js')
